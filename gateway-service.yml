@@ -6,9 +6,8 @@ server :
   port : 9009
   
 zuul:
-  prefix: /CMSforce
   routes:
-    books:
-      path: /as/**
+    cmsforce:
+      path: /cmsforce/**
       service-id: CMSFORCE
-      
+      strip-prefix: false
