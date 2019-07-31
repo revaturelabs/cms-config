@@ -7,7 +7,7 @@ server :
   
 zuul:
   routes:
-    content:
-      path: /content/**
+    cmsforce:
+      path: /cmsforce/**
       service-id: CMSFORCE
       strip-prefix: false
