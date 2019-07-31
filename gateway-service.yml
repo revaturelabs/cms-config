@@ -9,5 +9,5 @@ zuul:
   routes:
     cmsforce:
       path: /cmsforce/**
-      service-id: CMSFORCE
+      service-id: content-service
       strip-prefix: false
