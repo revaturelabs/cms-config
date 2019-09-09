@@ -1,12 +1,20 @@
 spring:
   datasource:
-      driver-class-name: oracle.jdbc.driver.OracleDriver
+      driver-class-name: org.postgresql.Driver
       url: ${DB_URL}
       username: ${DB_USER}
-      password: ${DB_PASSWORD}
+      password: ${DB_PASS}
   jpa:
      hibernate:
-      show-sql: false
+       show-sql: false
+     properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+     database-plateform: org.hibernate.dialect.PostgreSQL9Dialect
       
 eureka:
   client:
